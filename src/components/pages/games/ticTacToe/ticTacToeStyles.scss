@@ -1,0 +1,68 @@
+div#ticTacToeBoard {
+    display: block;
+    margin: 30px auto auto auto;
+    width: max-content;
+    box-shadow: 0 0 50px 0 #343435;
+    border: 10px double #343435;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 1.0;
+}
+
+div#cover {
+    opacity: 0.0;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    border: none;
+    visibility: hidden;
+    position: fixed;
+    padding-top: 40vh;
+    background-color: #232324;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    overflow: hidden;
+    transition-property: opacity;
+    transition-duration: 1.0s;
+
+    &.shown {
+        visibility: visible;
+        opacity: 1.0;
+    }
+}
+
+td.ticTacToeCell {
+    $widthAndHeight: 10vw;
+    width: $widthAndHeight;
+    height: $widthAndHeight;
+    background-color: #343435;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    border-radius: 5px;
+
+    &.empty:hover {
+        background-color: #454546;
+    }
+}
+
+span.cellContent {
+    display: block;
+    margin: auto;
+    opacity: 0.0;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    color: inherit;
+    font-size: 7.5vw;
+    font-weight: 300;
+    font-family: monospace;
+    text-align: center;
+    text-shadow: #454546 1px 1px;
+    &.X {
+        color: #d0d334;
+    }
+    &.O {
+        color: #1b2ab3;
+    }
+}

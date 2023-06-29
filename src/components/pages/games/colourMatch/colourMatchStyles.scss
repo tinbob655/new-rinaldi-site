@@ -1,0 +1,102 @@
+div#gameBoard {
+    width: 75vw;
+    height: 70vh;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    transition-property: border;
+    transition-duration: 1s;
+    border: 5px double #343435;
+}
+
+div.colourMatchCell {
+    background-color: #454546;
+    width: 99.5%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    border: 0.1vw solid #000;
+    display: block;
+    border-radius: 10px;
+    opacity: 1.0;
+    visibility: visible;
+    transition-property: opacity transform;
+    transition-duration: 0.5s;
+    z-index: 2;
+
+    &:hover {
+        transform: scale(1.05, 1.5);
+    }
+
+    &.enlarged {
+        z-index: 4;
+
+        animation-name: shake;
+        animation-duration: 0.2s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-timing-function: linear;
+        @keyframes shake {
+            0% {
+                transform: rotate(0deg) scale(1.05, 1.5);
+            }
+            25% {
+                transform: rotate(0.25deg) scale(1.05, 1.5);
+            }
+            75% {
+                transform: rotate(-0.25deg) scale(1.05, 1.5);
+            }
+            100% {
+                transform: rotate(0deg) scale(1.05, 1.5);
+            }
+        }
+    }
+
+    &.hidden {
+        opacity: 0.0;
+        visibility: hidden;
+    }
+}
+
+div#endScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    border: none;
+    padding: 0;
+    display: block;
+    z-index: 99;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-color: #232324;
+    transition-property: opacity;
+    transition-duration: 1s;
+    opacity: 1.0;
+    visibility: visible;
+
+    &.hidden {
+        visibility: hidden !important;
+        opacity: 0.0;
+    }
+}
+
+button#startButton {
+    transition-property: transform;
+    transition-duration: 0.5s;
+
+    &.hidden {
+        transform: scale(0, 0);
+    }
+}
+
+h2#movesCounter {
+    transition-property: opacity;
+    transition-duration: 0.75s;
+    opacity: 1.0;
+
+    &.hidden {
+        opacity: 0.0;
+    }
+}

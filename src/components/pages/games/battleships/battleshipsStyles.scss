@@ -1,0 +1,122 @@
+div#mainBoard {
+    width: 75vw;
+    height: 70vh;
+    border:5px double #454546;
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 0;
+    margin: auto
+}
+
+h2#gameInfo {
+    margin-right: 20px;
+    transition-property: transform;
+    transition-duration: 0.75s;
+    margin-left: 20px;
+
+    &.hidden {
+        transform: scale(0, 0);
+    }
+}
+
+div.gridSquare {
+    border: 1px solid #343435;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.0;
+    display: block;
+    z-index: 2;
+    transition-property: opacity background-color;
+    transition-duration: 0.5s;
+
+    &.shown {
+        background-color: #696969;
+        opacity: 0.5;
+
+        &.hoverAllowed:hover {
+            opacity: 1.0;
+        }
+
+        &.hit {
+            background-color: rgb(252, 119, 119);
+        }
+
+        &.sunk {
+            animation-name: sunk !important;
+            animation-duration: 1s;
+            animation-direction: normal;
+            animation-iteration-count: 1;
+            background-color: red;
+        }
+
+        &.miss {
+            background-color: rgb(247, 247, 247);
+        }
+    }
+}
+
+button#startButton {
+    opacity: 1.0;
+    transition-property: transform;
+    transition-duration: 1s;
+
+    &.hidden {
+        transform: scale(0, 0);
+    }
+}
+
+div#gameOverScreen {
+    opacity: 0.0;
+    transition-property: opacity;
+    transition-duration: 1s;
+    width: 0;
+    height: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    border: none;
+    z-index: 10;
+
+    &.shown {
+        opacity: 1.0;
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+h1#endScreenText {
+    margin-top: 40vh;
+}
+
+div#gameContent {
+    transition-property: opacity;
+    transition-duration: 1s;
+    visibility: visible;
+
+    &.hidden {
+        opacity: 0.0;
+    }
+}
+
+@keyframes sunk {
+    0% {
+        background-color:rgb(252, 119, 119);
+    } 40% {
+        background-color: red;
+    } 60% {
+        background-color: rgb(252, 119, 119);
+    } 70% {
+        background-color: red;
+    } 80% {
+        background-color: rgb(219, 219, 219)
+    } 90% {
+        background-color: red;
+    } 95% {
+        background-color: rgb(252, 119, 119);
+    } 100% {
+        background-color: red;
+    }
+}

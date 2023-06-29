@@ -1,0 +1,218 @@
+:root {
+  --pxEnlargment: 0px;
+}
+
+body {
+  visibility: hidden;
+  opacity: 0.0;
+  background-color: #232324;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  margin: calc(var(--pxEnlargment) + 0px);
+  padding: 0;
+  border: none;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, p {
+  text-align: center;
+}
+
+h1 {
+  font-family: helvetica;
+  color: #4cc530;
+  font-weight: 600;
+  font-size: calc(var(--pxEnlargment) + 25px);
+}
+
+h2 {
+  font-family: verdana;
+  color: #eeeeee;
+  font-weight: 400;
+  font-size: calc(var(--pxEnlargment) + 20px);
+}
+
+h3 {
+  font-family: sans-serif;
+  font-size: calc(var(--pxEnlargment) + 18px);
+  color: #83c773;
+  transition-property: transform;
+  transition-duration: 0.5s;
+  text-decoration: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: fit-content;
+  z-index: -1;
+
+  &:hover {
+    transform: scale(1.1, 1.1);
+  }
+}
+
+p {
+  font-family: sans-serif;
+  font-size: calc(var(--pxEnlargment) + 15px);
+  color: #4cc530;
+  font-weight: 800;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+iframe {
+  border: none;
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  background-color: #363636;
+  border-radius: calc(var(--pxEnlargment) + 10px);
+  margin-bottom: 25vh;
+  height: 500px;
+  padding: calc(var(--pxEnlargment) + 7px);
+}
+
+audio {
+  z-index: 0;
+  position: relative;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+progress, ::-webkit-progress-bar{
+  border: none;
+  background-color: #232324;
+}
+
+::-webkit-progress-value, ::-moz-progress-bar{
+  background-color: #4cc530;
+}
+
+div {
+  padding: 0;
+  margin: 0;
+  border: none;
+
+  &#introbox {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #6f6f70;
+    z-index: 6;
+    transition-property: transform;
+    transition-duration: 1s;
+    box-shadow: 0 0 10px 5px #6f6f70;
+
+    &.hidden {
+      transform: scale(0, 0);
+    }
+  }
+
+  &.contentSection {
+    width: 85%;
+    height: 0;
+    border: 10px double #343435;
+    border-radius: 20px;
+    margin: 10px auto;
+  }
+
+  &.hiddenScroll {
+    scrollbar-width: 0;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
+  &#mobileHeader {
+    width: 50vw;
+    max-width: 0;
+    max-height: 80vh;
+    transition-property: max-width;
+    transition-duration: 1s;
+    background-color: #252526;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 99;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    &.open {
+      max-width: 35vw;
+    }
+  }
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+td.headerCell {
+  transition-property: background-color border transform;
+  transition-duration: 0.5s;
+  background-color: #343435;
+  border: calc(var(--pxEnlargment) + 5px) solid #454546;
+  border-radius: calc(var(--pxEnlargment) + 10px);
+
+  &:hover {
+    background-color: #565657;
+    border: calc(var(--pxEnlargment) + 5px) solid #676768;
+    transform: scale(1.2, 1.05);
+  }
+}
+
+img {
+  width: auto;
+  display: block;
+
+  &.rounded {
+    border-radius: 50%;
+  }
+
+  &.centered {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  //for music page album covers only
+  &.albumCover.spinning {
+    animation-name: spinning;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    @keyframes spinning {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  &.growOnHover {
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transform: scale(1, 1);
+    max-width: 75%;
+    $paddingTopAndBottom: 80px;
+    padding-top: $paddingTopAndBottom;
+    padding-bottom: $paddingTopAndBottom;
+
+    &:hover {
+      transform: scale(1.2, 1.2) rotate(360deg);
+    }
+  }
+}
