@@ -106,7 +106,10 @@ class Merch extends Component {
                     </table>
                 <h3 style={{marginTop: '30px'}}>
                     <a href="https://newrinaldi-merch.teemill.com/" target="_blank">
-                        If u don't buy any merch from this link, then you will be regarded as bad by others (u don't want that)
+                        If u don't buy any merch from <h3 style={{display: 'inline', textDecoration: 'underline', fontWeight: 900, color: '#afd1a8'}}>
+                            this link{/*SEPEARATE H3 USED TO MAKE THE LINK BOLD AND UNDERLINED */}
+                        </h3>
+                        , then you will be regarded as bad (u don't want that)
                     </a>
                 </h3>
                 </React.Fragment>
@@ -176,7 +179,8 @@ class Merch extends Component {
 
                     <h3 style={{marginTOp: '80px'}}>
                         <a href="https://newrinaldi-merch.teemill.com/" target="_blank">
-                            If u don't buy any merch from this link, then you will be regarded as bad by others (u don't want that)
+                            If u don't buy any merch from <h3 style={{textDecoration: 'underline', display: 'inline', fontWeight: 900, color: '#afd1a8'}}>
+                            this link</h3> , then you will be regarded as bad(u don't want that)
                         </a>
                     </h3>
                 </React.Fragment>
