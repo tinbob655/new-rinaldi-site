@@ -53,14 +53,14 @@ class Header extends Component {
         else {
             return (
                 <React.Fragment>
-                    <div style={{position: 'fixed', top: 10, left: 0,}}>
+                    <div style={{position: 'fixed', top: 10, left: 0, zIndex: 99}}>
                         <div>
-                            <button class="hamburger hamburger--elastic" type="button" id="hamburger" onClick={function() {
+                            <button className="hamburger hamburger--elastic" type="button" id="hamburger" onClick={function() {
                                 document.getElementById('hamburger').classList.toggle('is-active');
                                 document.getElementById('mobileHeader').classList.toggle('open');
                             }}>
-                                <span class="hamburger-box">
-                                    <span class="hamburger-inner"></span>
+                                <span className="hamburger-box">
+                                    <span className="hamburger-inner"></span>
                                 </span>
                             </button>
                         </div>
