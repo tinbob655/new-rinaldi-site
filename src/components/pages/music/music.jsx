@@ -215,6 +215,20 @@ class Music extends Component {
                 <div id="all-music">
                     {this.getMusicPlayers()}
                 </div>
+
+                <h2>
+                    And that's not all
+                </h2>
+                <button type="button" onClick={function() {changePage('downloads')}}>
+                    <h3>
+                        Some people are selfish, impatient and cheap. If that sounds like you, then get free NewRinaldi
+                        audio downloads right past <h3 style={{display: 'inline', textDecoration: 'underline', fontWeight: 900, color: '##afd1a8'}}>
+                            This link
+                        </h3>
+                    </h3>
+                </button>
+
+                <div className="contentSection"></div>
             </React.Fragment>
         );
     };

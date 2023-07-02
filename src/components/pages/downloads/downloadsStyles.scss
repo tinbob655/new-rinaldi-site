@@ -1,0 +1,32 @@
+img.albumCoverImage {
+  height: 50vh;
+  width: auto;
+  border: 10px double  #454546;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button.downloadButton {
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5vh;
+  display: block;
+  background-color: #9fe9b1;
+  border: 10px double #676768;
+  width: 50%;
+  display: block;
+  transition-property: transform background-color border;
+  transition-duration: 0.75s;
+
+  &:hover {
+    transform: scale(1.2, 1.2) rotate(720deg);
+    background-color: #77ed94;
+    border: 10px double #454546;
+    opacity: 1.0;
+  }
+}
+
+h3.downloadButtonText {
+  color: #000000;
+}

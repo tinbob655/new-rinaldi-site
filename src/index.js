@@ -6,6 +6,9 @@ import Header from './components/header.jsx';
 import Content from './components/content.jsx';
 import Footer from './components/footer.jsx';
 
+//start firebase
+setupFirebase();
+
 //change page function
 export function changePage(destination) {
   sessionStorage.setItem('currentPage', destination);
@@ -31,9 +34,6 @@ export function isMobile () {
       return (false);
   };
 };
-
-//start firebase
-setupFirebase();
 
 //if the user is on mobile, set the scss enlargments
 setTimeout(() => {

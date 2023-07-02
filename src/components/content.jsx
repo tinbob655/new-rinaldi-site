@@ -6,6 +6,7 @@ import Money from './pages/money/money.jsx';
 import Music from './pages/music/music.jsx';
 import Games from './pages/games/games.jsx';
 import SheetMusic from './pages/sheetMusic/sheetMusic.jsx';
+import Downloads from './pages/downloads/downloads.jsx';
 
 class Content extends Component {
 
@@ -26,6 +27,7 @@ class Content extends Component {
             music: <Music/>,
             games: <Games/>,
             sheetMusic: <SheetMusic/>,
+            downloads: <Downloads/>
         };
 
         return allPages[sessionStorage.getItem('currentPage')];
