@@ -170,9 +170,8 @@ class Downloads extends Component {
                                         document.getElementById('hiddenDownloadLink'+trackNo).click();
                                     }}>
                                         {isMobile() == true ? (
-                                            <h3 className='downloadButtonText'>
-                                                Download
-                                            </h3>
+                                            <img src="https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FinteractiveElements%2Fsave.svg?alt=media&token=2fa4a545-2c5f-4ff9-8d43-02164937aef4"
+                                            style={{width: '75%', height: 'auto'}} className="centered"/>
                                         ) : (
                                             <h3 className="downloadButtonText">
                                                 Download:<br/><br/> {trackData.frontendTitle}
