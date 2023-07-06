@@ -112,7 +112,7 @@ class Merch extends Component {
                                 <td style={{width: '12.5%'}}>   {/*REFRESH BUTTON */}
                                     <img src='https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FinteractiveElements%2Frefresh.svg?alt=media&token=b7dca4f6-fbe3-4fdd-881f-2485ec413282'
                                      style={this.state.styles.galleryImage}
-                                    onClick={function() {refreshGallery()}} className="growOnHover"/>
+                                    onClick={function() {refreshGallery()}} className="growOnHover" alt="Internet is required to load images"/>
                                 </td>
     
                                 <td>
@@ -128,7 +128,7 @@ class Merch extends Component {
                                                         </h2>
                                                         <img src='https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FalbumCovers%2Ftakeoff.jpg?alt=media&token=455591b1-966b-4f7b-ab5a-05eb9c17d1b0'
                                                          style={this.state.styles.albumCover}
-                                                        className="centered growOnHover" id="cover0"/>
+                                                        className="centered growOnHover" id="cover0" alt="Internet is required to load images"/>
                                                     </button>
                                                 </td>
     
@@ -140,7 +140,7 @@ class Merch extends Component {
                                                         </h2>
                                                         <img src='https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FalbumCovers%2FTwitching%20Around%20V2.jpeg?alt=media&token=0995221a-07cd-481c-80aa-133c293b9fd2'
                                                          style={this.state.styles.albumCover}
-                                                        className="centered growOnHover" id="cover1"/>
+                                                        className="centered growOnHover" id="cover1" alt="Internet is required to load images"/>
                                                     </button>
                                                 </td>
     
@@ -152,7 +152,7 @@ class Merch extends Component {
                                                         </h2>
                                                         <img src='https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FalbumCovers%2FsovietMachine3Cover.jpg?alt=media&token=7617f186-209d-4535-af1d-b0dcf93f0bee'
                                                          style={this.state.styles.albumCover}
-                                                        className="centered growOnHover" id="cover2"/>
+                                                        className="centered growOnHover" id="cover2"alt="Internet is required to load images"/>
                                                     </button>
                                                 </td>
     
@@ -166,7 +166,7 @@ class Merch extends Component {
                                     backgroundColor: 'red', display: 'unset', marginLeft: 0, zIndex: 2, visibility: 'hidden',}}></div>
                                     <img src='https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FinteractiveElements%2Fright%20arrow.svg?alt=media&token=297f3c8e-6e13-4651-87fb-173816dea64d'
                                      style={this.state.styles.galleryImage} 
-                                    onClick={function() {moveGallery()}} className="growOnHover" id="sheetMusicMoveButton"/>
+                                    onClick={function() {moveGallery()}} className="growOnHover" id="sheetMusicMoveButton" alt="Internet is required to load images"/>
                                 </td>
                             </tr>
                         </table>
@@ -206,7 +206,7 @@ class Merch extends Component {
                         {/* REFRESH BUTTON */}
                         <img src='https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FinteractiveElements%2Frefresh.svg?alt=media&token=b7dca4f6-fbe3-4fdd-881f-2485ec413282'
                          style={this.state.styles.galleryImageMobile} 
-                        onClick={function() {refreshGallery()}} className="growOnHover centered"/>
+                        onClick={function() {refreshGallery()}} className="growOnHover centered" alt="Internet is required to load images"/>
 
                         <div className="contentSection"></div>
 
@@ -219,7 +219,7 @@ class Merch extends Component {
                                 </h2>
                                 <img src='https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FalbumCovers%2Ftakeoff.jpg?alt=media&token=455591b1-966b-4f7b-ab5a-05eb9c17d1b0'
                                  style={this.state.styles.albumCoverMobile}
-                                className="centered growOnHover" id="cover0"/>
+                                className="centered growOnHover" id="cover0" alt="Internet is required to load images"/>
                             </button>
 
                             <div className="contentSection"></div>
@@ -231,7 +231,7 @@ class Merch extends Component {
                                 </h2>
                                 <img src='https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FalbumCovers%2FTwitching%20Around%20V2.jpeg?alt=media&token=0995221a-07cd-481c-80aa-133c293b9fd2'
                                 style={this.state.styles.albumCoverMobile}
-                                className="centered growOnHover" id="cover1"/>
+                                className="centered growOnHover" id="cover1" alt="Internet is required to load images"/>
                             </button>
 
                             <div className="contentSection"></div>
@@ -243,7 +243,7 @@ class Merch extends Component {
                                 </h2>
                                 <img src='https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FalbumCovers%2FsovietMachine3Cover.jpg?alt=media&token=7617f186-209d-4535-af1d-b0dcf93f0bee'
                                  style={this.state.styles.albumCoverMobile}
-                                className="centered growOnHover" id="cover2"/>
+                                className="centered growOnHover" id="cover2" alt="Internet is required to load images"/>
                             </button>
 
                         </div>
@@ -258,7 +258,7 @@ class Merch extends Component {
                         {/* Actual move button */}
                         <img src='https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FinteractiveElements%2Fdown%20arrow.png?alt=media&token=84ba7e79-445d-4c10-be9e-32965e4c41eb'
                          style={this.state.styles.galleryImageMobile} 
-                        onClick={function() {moveGallery()}} className="growOnHover centered" id="sheetMusicMoveButton"/>
+                        onClick={function() {moveGallery()}} className="growOnHover centered" id="sheetMusicMoveButton" alt="Internet is required to load images"/>
                             
     
                         {/* ACTUAL SHEET MUSIC */}

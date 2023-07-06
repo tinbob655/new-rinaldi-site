@@ -156,7 +156,8 @@ class Downloads extends Component {
                                 <td style={isMobile() == true ? {width: '25%'} : {width: '50%'}}>
 
                                     {/*ALBUM COVER*/}
-                                    <img src={trackData.albumCoverSrc} className="albumCoverImage rounded" style={isMobile() == true ? {height: '20vh'} : {}}/>
+                                    <img src={trackData.albumCoverSrc} className="albumCoverImage rounded" style={isMobile() == true ? {height: '20vh'} : {}}
+                                    alt="Internet Is Required To Load Images"/>
 
                                 </td>
                                 <td style={isMobile() == true ? {width: '75%'} : {width: '50%'}}>
@@ -171,7 +172,7 @@ class Downloads extends Component {
                                     }}>
                                         {isMobile() == true ? (
                                             <img src="https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FinteractiveElements%2Fsave.svg?alt=media&token=2fa4a545-2c5f-4ff9-8d43-02164937aef4"
-                                            style={{width: '75%', height: 'auto'}} className="centered"/>
+                                            style={{width: '75%', height: 'auto'}} className="centered" alt="Internet Is Required To Load Images"/>
                                         ) : (
                                             <h3 className="downloadButtonText">
                                                 Download:<br/><br/> {trackData.frontendTitle}

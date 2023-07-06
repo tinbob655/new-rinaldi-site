@@ -94,7 +94,7 @@ class Footer extends Component {
                 {/*changing background */}
                 <div id="changingBackgroundCoverImageWrapper" style={this.state.styles.changingBackgroundImageWrapper}>
                     <img src='https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FbackgroundImages%2FLogo%20Dark.png?alt=media&token=8a485c80-590b-4e2c-a24f-42338bdff567'
-                     style={this.state.styles.changingImage} id="changingImage"/>
+                     style={this.state.styles.changingImage} id="changingImage" alt="Internet Is Required To Load Images"/>
                 </div>
                 <p>
                     Contact us if you really must at:

@@ -274,7 +274,7 @@ class Music extends Component {
                                 <tr>
                                     <td>        {/*TRACK ALBUM COVER IMAGE */}
                                         <img src={track.cover} style={this.state.styles.albumCover}
-                                        className="albumCover" id={"albumCover"+track.title}/>
+                                        className="albumCover" id={"albumCover"+track.title} alt="Internet is required to load images"/>
                                     </td>
                                     <td>    {/* ACTUAL PLAYER */}
                                         <div style={this.state.styles.musicPlayerDiv} id={"player"+track.title}>
@@ -286,7 +286,7 @@ class Music extends Component {
                                                              onClick={function() {playPauseClicked(track)}} type="button">
                                                                 <img src='https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FinteractiveElements%2FPlay%20Button.png?alt=media&token=1f4da03d-8933-4df9-ae65-b785a99466ba'
                                                                  id={"playPause"+track.title}
-                                                                style={this.state.styles.playerButtonImage}/>
+                                                                style={this.state.styles.playerButtonImage} alt="Internet is required to load images"/>
                                                             </button>
                                                         </td>
                                                         <td>    {/* TIMER */}
@@ -297,7 +297,7 @@ class Music extends Component {
                                                         <td>    {/* STOP BUTTON */}
                                                             <button type="button" onClick={function() {stopMusic(track)}}>
                                                                 <img src='https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FinteractiveElements%2FStop%20Button.png?alt=media&token=a1ce12f3-41c9-4bee-b847-5c66c2d26de0'
-                                                                 style={this.state.styles.playerButtonImage} />
+                                                                 style={this.state.styles.playerButtonImage} alt="Internet is required to load images"/>
                                                             </button>
                                                         </td>
                                                         <td>    {/* PROGRESS BAR */}
@@ -309,7 +309,7 @@ class Music extends Component {
                                                             <button type="button" onClick={function() {muteUnmuteClicked(track)}}>
                                                                 <img src='https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FinteractiveElements%2FMute%20Button.png?alt=media&token=0c180655-58f7-4db4-a472-f1f95483e8e9'
                                                                  style={this.state.styles.playerButtonImage}
-                                                                 id={"muteUnmute"+track.title} />
+                                                                 id={"muteUnmute"+track.title} alt="Internet is required to load images"/>
                                                             </button>
                                                         </td>
                                                     </tr>
@@ -350,7 +350,7 @@ class Music extends Component {
 
                             {/*TRACK ALBUM COVER IMAGE */}
                             <img src={track.cover} style={this.state.styles.albumCover} 
-                            className="albumCover" id={"albumCover"+track.title}/>
+                            className="albumCover" id={"albumCover"+track.title} alt="Internet is required to load images"/>
 
                             {/* ACTUAL PLAYER */}
                             <div style={{
@@ -374,7 +374,7 @@ class Music extends Component {
                                                     onClick={function() {playPauseClicked(track)}} type="button">
                                                     <img src='https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FinteractiveElements%2FPlay%20Button.png?alt=media&token=1f4da03d-8933-4df9-ae65-b785a99466ba'
                                                      id={"playPause"+track.title}
-                                                    style={this.state.styles.playerButtonImage}/>
+                                                    style={this.state.styles.playerButtonImage} alt="Internet is required to load images"/>
                                                 </button>
                                             </td>
                                             <td>
@@ -389,7 +389,7 @@ class Music extends Component {
                                                 {/* STOP BUTTON */}
                                                 <button type="button" onClick={function() {stopMusic(track)}}>
                                                     <img src='https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FinteractiveElements%2FStop%20Button.png?alt=media&token=a1ce12f3-41c9-4bee-b847-5c66c2d26de0'
-                                                     style={this.state.styles.playerButtonImage} />
+                                                     style={this.state.styles.playerButtonImage} alt="Internet is required to load images"/>
                                                 </button>
                                             </td>
                                             <td style={{width: '35%'}}>
@@ -408,7 +408,7 @@ class Music extends Component {
                                                 <button type="button" onClick={function() {muteUnmuteClicked(track)}}>
                                                     <img src='https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FinteractiveElements%2FMute%20Button.png?alt=media&token=0c180655-58f7-4db4-a472-f1f95483e8e9'
                                                      style={this.state.styles.playerButtonImage}
-                                                        id={"muteUnmute"+track.title} />
+                                                        id={"muteUnmute"+track.title} alt="Internet is required to load images"/>
                                                 </button>
                                             </td>
                                         </tr>

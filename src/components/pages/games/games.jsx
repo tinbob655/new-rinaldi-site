@@ -93,7 +93,7 @@ class Games extends Component {
                             {gameTitles[cellNo]}
                         </h3>
                         <img src={gameImages[cellNo]} className="centered"
-                         style={{height: 'auto', maxHeight: '200px'}}/>
+                         style={{height: 'auto', maxHeight: '200px'}} alt="Internet Is Required To Load Images"/>
                     </button>
                 </td>
             );

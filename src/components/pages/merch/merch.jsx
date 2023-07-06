@@ -67,7 +67,7 @@ class Merch extends Component {
                             <td style={{width: '12.5%'}}>   {/*REFRESH BUTTON */}
                                 <img src='https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FinteractiveElements%2Frefresh.svg?alt=media&token=b7dca4f6-fbe3-4fdd-881f-2485ec413282'
                                  style={this.state.styles.galleryImage}
-                                onClick={function() {galleryRefresh()}} className="growOnHover"/>
+                                onClick={function() {galleryRefresh()}} className="growOnHover" alt="Internet Is Required To Load Images"/>
                             </td>
                             <td>
                                 <a href="https://newrinaldi-merch.teemill.com/" target="_blank">
@@ -78,18 +78,18 @@ class Merch extends Component {
                                                 <td style={{width: '20%'}}> {/*IMAGE 1 */}
                                                     <img src='https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2Fmerch%2FBlack%20t-shirt.webp?alt=media&token=23e326fe-e707-4bd7-9081-6495bb607ff5'
                                                      style={this.state.styles.galleryImage}
-                                                    id="image0"/>
+                                                    id="image0" alt="Internet Is Required To Load Images"/>
                                                 </td>
 
                                                 <td style={{width: '35%'}}> {/*IMAGE 2 */}
                                                     <img src='https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2Fmerch%2FR4R%20hoodie.webp?alt=media&token=2786c12a-39eb-41e2-84c0-27432b1b6eea'
-                                                     style={this.state.styles.galleryImage} id="image1"/>
+                                                     style={this.state.styles.galleryImage} id="image1" alt="Internet Is Required To Load Images"/>
                                                 </td>
 
                                                 <td style={{width: '20%'}}> {/* IMAGE 3 */}
                                                     <img src='https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2Fmerch%2FR4R%20t-shirt.webp?alt=media&token=722502d2-2420-48ea-abff-602046109139'
                                                      style={this.state.styles.galleryImage}
-                                                    id="image2"/>
+                                                    id="image2" alt="Internet Is Required To Load Images"/>
                                                 </td>
 
                                             </tr>
@@ -100,7 +100,7 @@ class Merch extends Component {
                             <td style={{width: '12.5%'}}>   {/* MOVE GALLERY BUTTON */}
                                 <img src='https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FinteractiveElements%2Fright%20arrow.svg?alt=media&token=297f3c8e-6e13-4651-87fb-173816dea64d'
                                  style={this.state.styles.galleryImage} 
-                                onClick={function() {galleryMove()}} className="growOnHover"/>
+                                onClick={function() {galleryMove()}} className="growOnHover" alt="Internet Is Required To Load Images"/>
                             </td>
                         </tr>
                     </table>
@@ -143,7 +143,7 @@ class Merch extends Component {
                         {/*Refresh button */}
                         <img src='https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FinteractiveElements%2Frefresh.svg?alt=media&token=b7dca4f6-fbe3-4fdd-881f-2485ec413282'
                          style={this.state.styles.galleryImageMOBILE} onClick={function() {galleryRefresh()}}
-                        className="growOnHover"/>
+                        className="growOnHover" alt="Internet Is Required To Load Images"/>
 
                         <div className="contentSection"></div>
 
@@ -153,19 +153,19 @@ class Merch extends Component {
 
                                 {/* Image 0 */}
                                 <img src='https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2Fmerch%2FBlack%20t-shirt.webp?alt=media&token=23e326fe-e707-4bd7-9081-6495bb607ff5'
-                                 style={this.state.styles.galleryImageMOBILE}id="image0"/>
+                                 style={this.state.styles.galleryImageMOBILE}id="image0" alt="Internet Is Required To Load Images"/>
 
                                 <div className="contentSection"></div>
 
                                 {/* Image 1 */}
                                 <img src='https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2Fmerch%2FR4R%20hoodie.webp?alt=media&token=2786c12a-39eb-41e2-84c0-27432b1b6eea'
-                                 style={this.state.styles.galleryImageMOBILE} id="image1"/>
+                                 style={this.state.styles.galleryImageMOBILE} id="image1" alt="Internet Is Required To Load Images"/>
 
                                 <div className="contentSection"></div>
 
                                 {/* Image 2 */}
                                 <img src='https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2Fmerch%2FR4R%20t-shirt.webp?alt=media&token=722502d2-2420-48ea-abff-602046109139'
-                                 style={this.state.styles.galleryImageMOBILE} id="image2"/>
+                                 style={this.state.styles.galleryImageMOBILE} id="image2" alt="Internet Is Required To Load Images"/>
                             </div>
                         </a>
 
@@ -174,7 +174,7 @@ class Merch extends Component {
                         {/* move gallery button */}
                         <img src='https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FinteractiveElements%2Fdown%20arrow.png?alt=media&token=84ba7e79-445d-4c10-be9e-32965e4c41eb'
                          style={this.state.styles.galleryImageMOBILE} onClick={function() {galleryMove()}}
-                        className="growOnHover"/>
+                        className="growOnHover" alt="Internet Is Required To Load Images"/>
                     </div>
 
                     <h3 style={{marginTOp: '80px'}}>
