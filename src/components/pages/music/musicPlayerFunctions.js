@@ -60,7 +60,6 @@ export function playPauseClicked(track) {
         const storage = getStorage();
         getDownloadURL(ref(storage, track.src))
             .then((url) => {
-                console.log(url)
                 audio.src = url;
                 //resume the audio if necessary
                 if (track.time != 0) {

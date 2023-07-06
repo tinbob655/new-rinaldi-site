@@ -7,7 +7,7 @@ import { playPauseClicked, muteUnmuteClicked, stopMusic } from './musicPlayerFun
 class Music extends Component {
 
     state = {
-        trackList: ['startYourEngines', 'bitHavinAFit', 'alexComp1Remix','aroundTwitching', 'christmasPresent', 'greenestGrass',
+        trackList: ['startYourEngines', 'mrCoffee', 'bitHavinAFit', 'alexComp1Remix','aroundTwitching', 'theIronDuke', 'christmasPresent', 'greenestGrass',
          'iAmGoingToTakeTheRights', 'twitchingAround','marchOfRansome', 'onwardsAndUpwards', 'R4RTheme', 'skidaddle',
          'summerSun', 'takeoff', 'theLastStand', 'tunsinBopperV2', 'twitchingAroundV2', 'spoons2'],
 
@@ -17,6 +17,12 @@ class Music extends Component {
                 cover: 'https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FalbumCovers%2FStart%20Your%20Engines%20Cover.jpg?alt=media&token=159b4b11-98cb-429d-8353-0274dab58136',
                 time: 0,
                 src: 'Music/Start Your Engines.mp3',
+            },
+            mrCoffee: {
+                title: "Mr. Coffee",
+                cover: 'https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FalbumCovers%2FhugeGuitarCover.jpg?alt=media&token=7779a462-b72b-4a88-a356-fb16b18c8ea9',
+                time: 0,
+                src: 'Music/MrCoffeeFLAC.flac'
             },
             bitHavinAFit: {
                 title: "8-Bit Havin' A Fit",
@@ -35,6 +41,12 @@ class Music extends Component {
                 cover: 'https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FalbumCovers%2FaroundTwitchingCover.png?alt=media&token=31486fb6-1280-4b57-b483-faa912b33008',
                 time: 0,
                 src: 'Music/Around Twitching.mp3',
+            },
+            theIronDuke: {
+                title: "The Iron Duke",
+                cover: 'https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FalbumCovers%2FhugeGuitarCover.jpg?alt=media&token=7779a462-b72b-4a88-a356-fb16b18c8ea9',
+                time: 0,
+                src: 'Music/TheIronDukeFLAC.flac',
             },
             christmasPresent: {
                 title: 'Christmas Crunker',
