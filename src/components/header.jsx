@@ -73,6 +73,25 @@ class Header extends Component {
         };
     };
 
+    getDesktopHeaderHTML() {
+        const pages = ['Home', 'Media', 'Merch', 'Money', 'Music'];
+
+        //get the HTML
+        var headerHTML = [];
+        pages.forEach((page) => {
+            if (page.toLowerCase() != sessionStorage.getItem('currentPage')) {
+                headerHTML.push(<td className="headerCell" id={"headerCell" + page}>
+                    <button type="button" style={{height: '100%'}} onClick={function() {changePage(page.toLowerCase());}} >
+                        <h2 style={page.toLowerCase() == 'home' ? {color: 'yellow'} : {}}>
+                            {page}
+                        </h2>
+                    </button>
+                </td>);
+            };
+        });
+        return headerHTML;
+    };
+
     getMobileHeaderHTML() {
         const texts = [
             `NewRinaldi's main page`,
@@ -93,15 +112,15 @@ class Header extends Component {
 
         const pages = ['Home', 'Media', 'Merch', 'Money', 'Music'];
 
-        let headerHTML = [<div className="contentSection"></div>];
+        let headerHTML = [<div className="contentSection" style={{border: '10px double #565657'}}></div>];
 
         for (let i = 0; i < pages.length; i++) {
             if (pages[i].toLowerCase() != sessionStorage.getItem('currentPage')) {
                 headerHTML.push(
                     <React.Fragment>
-                        <button type="button"
+                        <button type="button" className="mobileHeaderButton"
                          onClick={function() {changePage(pages[i].toLowerCase())}}>
-                            <h2>
+                            <h2 style={{borderRadius: '20px', backgroundColor: '#565657', padding: '25px 0'}}>
                                 {pages[i]}
                             </h2>
                             <p style={{fontSize: '20px'}}>
@@ -109,33 +128,14 @@ class Header extends Component {
                                 <br/><br/><br/><br/>
                             </p>
                         </button>
-                        <div className="contentSection"></div>
+                        <div className="contentSection" style={{border: '10px double #565657'}}></div>
                     </React.Fragment>
                 );
             };
         };
 
         return headerHTML;
-    };
-
-    getDesktopHeaderHTML() {
-        const pages = ['Home', 'Media', 'Merch', 'Money', 'Music'];
-
-        //get the HTML
-        var headerHTML = [];
-        pages.forEach((page) => {
-            if (page.toLowerCase() != sessionStorage.getItem('currentPage')) {
-                headerHTML.push(<td className="headerCell" id={"headerCell" + page}>
-                    <button type="button" style={{height: '100%'}} onClick={function() {changePage(page.toLowerCase());}} >
-                        <h2 style={page.toLowerCase() == 'home' ? {color: 'yellow'} : {}}>
-                            {page}
-                        </h2>
-                    </button>
-                </td>);
-            };
-        });
-        return headerHTML;
-    };
+    };  
 };
 
 export default Header;
