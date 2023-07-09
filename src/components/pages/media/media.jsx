@@ -8,9 +8,9 @@ class Media extends Component {
 
         links: {
             spotify: 'https://open.spotify.com/embed/artist/1dBbc3XltRauSX0dRpRUE6?utm_source=generator',
-            itunes: 'https://embed.music.apple.com/gb/album/weasel-poppers/1653360332',
-            deezer: 'https://widget.deezer.com/widget/dark/album/374522487',
-            youtube: 'https://www.youtube.com/embed/hFmhwKAwFRM',
+            itunes: 'https://embed.music.apple.com/gb/album/pipe-down/1682086556',
+            deezer: 'https://widget.deezer.com/widget/dark/album/461138455',
+            youtube: 'https://www.youtube.com/embed/pFDRp19UhNU',
             amazon: 'https://music.amazon.co.uk/embed/B0BKX1XHTJ/?id=rz1u2YcBjF&marketplaceId=A1F83G8C2ARO7P&musicTerritory=GB',
         },
 
