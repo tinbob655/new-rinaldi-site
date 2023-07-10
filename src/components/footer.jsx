@@ -111,7 +111,7 @@ class Footer extends Component {
                 {this.getGamesPageButton()}
                 Created with Will R's brain<br/>Music from NewRinaldi by Alex P and Will R<br/>
                 NewRinaldi®©™.ltd.inc.org.net.co.uk are not responcible for any injuries or death including removal of limbs due to 
-                the wearing ofmerch<br/>All rights reserved NewRinaldi®©™.ltd.inc.org.net.co.uk<br/>NewRinaldi®©™.ltd.inc.org.net.co.uk
+                the wearing of merch<br/>All rights reserved NewRinaldi®©™.ltd.inc.org.net.co.uk<br/>NewRinaldi®©™.ltd.inc.org.net.co.uk
                 is a credit broker not a lender
             </div>
         );
