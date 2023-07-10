@@ -1,0 +1,62 @@
+div#mainGameBoard {
+    border: 10px double #454546;
+    width: 75vw;
+    height: 75vh;
+    margin-top: 5vh;
+    background-color: #282828;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+div.obst {
+    width: 2.5vw;
+    height: 2.4vw;
+    background-color: #1ddb66;
+    position: absolute;
+    display: block;
+    visibility: hidden;
+    left: 100%;
+
+    &.moving {
+        @keyframes movingObst {
+            from {
+                left: 100%;
+            }
+            to {
+                left: 0;
+            }
+        };
+        visibility: visible;
+        animation-name: movingObst;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-direction: normal;
+        animation-iteration-count: 1;
+    };
+};
+
+div#bird {
+    width: 2.5vw;
+    height: 2.5vw;
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FbackgroundImages%2FLogo%20Dark.png?alt=media&token=8a485c80-590b-4e2c-a24f-42338bdff567');
+    background-size: contain;
+    border: 2px solid #454546;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    left: 1%;
+    bottom: 0px;
+    opacity: 0.0;
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+
+button#startButton {
+    transition-property: opacity transform;
+    transition-duration: 1s;
+    opacity: 1.0;
+}
