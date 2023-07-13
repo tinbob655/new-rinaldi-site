@@ -1,29 +1,31 @@
 import React, {Component} from 'react';
 import './flappyBirdStyles.scss'
-import {isMobile} from '../../../../index.js';
 
 var difficultyMultiplyer:number = 1;
 var gameStarted:boolean = false;
 var obstNo:number = -1;
 
-function moveObst(obstNo:number) {
+async function moveObst(obstNo:number) {
     //moved an obst from the right to left of the play area
     const obst:any = document.getElementById('obst'+obstNo);
     //randomly position the obst vertically
     obst.style.top = String(Math.random() * 94) +'%';
     //begin move animation
-    obst.classList.add('moving');
-    setTimeout(() => {
-        //after movement, reset the obst
-        obst.classList.remove('moving');
-    }, 2500);
+    obst.style.visibility = 'visible';
+    for (let i = 100; i > 0; i = i - 1) {
+        obst.style.left = i + '%';
+        await delay(30 - (difficultyMultiplyer * 1.25));
+    };
+    //get rid of the obst after it has done its animation
+    obst.style.left = '100%';
+    obst.style.top = '200%';
+    obst.style.visibility = 'hidden';
 };
 
 async function increaseDifficulty() {
     //minimum difficulty mod is 10
     if (difficultyMultiplyer < 19) {
         difficultyMultiplyer = difficultyMultiplyer + 1;
-        console.log(difficultyMultiplyer);
 
         //delay then repeat
         await delay(5000);
@@ -34,7 +36,6 @@ async function increaseDifficulty() {
 
     return null;
 };
-
 
 function delay(millisec:number) {
     return new Promise(resolve => {
@@ -56,11 +57,12 @@ async function repeatingObstMover() {
 
 async function birdJump() {
     const bird:any = document.getElementById('bird');
-    const originalMarginBottom:number = Number(bird.style.bottom.replace('px', ''));
+    const originalMarginBottom:number = Number(bird.style.bottom.replace('%', ''));
 
     //bird on way up
-    for (let i = 0; i < 100; i = i + 5) {
-        bird.style.bottom = originalMarginBottom + i + 'px';
+    let distanceGainedByJump:number = 15; //the distance in % which will be gained by one jump
+    for (let i = 0; i < distanceGainedByJump; i = i + (distanceGainedByJump/20)) {
+        bird.style.bottom = originalMarginBottom + i + '%'
         
         //delay is non-linear to simulate gravity
         await delay(1 + ((i^5)/4));
@@ -71,16 +73,76 @@ async function birdJump() {
     document.addEventListener('click', function cancelFall() {stopFalling = true; document.removeEventListener('click', cancelFall)});
 
     //bird on way down
-    while (bird.style.bottom != '0px' && stopFalling ==  false) {
-        let bottom = bird.style.bottom.replace('px', '');
-        bird.style.bottom = Number(bottom) - 5 + 'px';
+    while (bird.style.bottom.replace('%', '') > 0 && stopFalling ==  false) {
+        let bottom = bird.style.bottom.replace('%', '');
+        bird.style.bottom = (Number(bottom) - 1) + '%';
 
         //delay gets bigger with height to simulate gravity
-        await delay(Number((bird.style.bottom.replace('px', ''))/100) + 10);
+        await delay(Number((bird.style.bottom.replace('%', ''))/100) + 10);
     };
 }
 
+async function lossChecker() {
+    if (gameStarted == true) {
+
+        //first check if the player has hit the top or the bottom of the area
+        const bird:any = document.getElementById('bird');
+        const bottom:number = bird.style.bottom.replace('%', '');
+        if (bottom > 99 || bottom < 1) {
+            gameOver();
+            return null;
+        };
+    
+        //then check if the player has hit an obst
+        const birdX:number = bird.style.left.replace('%', '');
+
+        //repeat for each obst
+        document.querySelectorAll('.obst').forEach((obst:any) => {
+
+            //asssign coordinate variables for the current obst
+            let obstX:number = obst.style.left.replace('%', '');
+            let obstY:number = obst.style.top.replace('%', '');
+            let birdY:number = 100 - bird.style.bottom.replace('%', '');
+
+            //check the y-coords match up
+            if (obstY > (birdY - 6) && obstY < (birdY - 3)) {
+
+                //if the x-coords match up, check the x-coords match up
+                if (obstX > (birdX - 1) && obstX < (birdX + 3)) {
+
+                    //collision has occured
+                    gameOver();
+                    return null;
+                };
+            };
+        });
+    
+        //if the player has not lost, then repeat the check after a delay so long as the game is still ongoing
+        await delay(20);
+        lossChecker();
+    };
+
+};
+
+function gameOver() {
+    gameStarted = false;
+
+    //frontend
+    const gameOverScreen:any = document.getElementById('gameOverScreen');
+    const gameOverText:any = document.getElementById('gameOverText');
+    gameOverText.innerText = "Pahahahhhahhahah, hahaaaaaahaaaaaa\n\nU lost, thats funny, click here to go again (u literally can't win btw).";
+    gameOverScreen.classList.add('shown');
+
+    setTimeout(() => {
+        const restartButton:any = document.getElementById('restartButton');
+        restartButton.style.visibility = 'visible';
+        restartButton.style.opacity = 1.0;
+    }, 2000);
+};
+
 async function startGame() {
+
+    //alter game started boolean
     gameStarted = true;
     
     //begin showing obsts
@@ -92,12 +154,27 @@ async function startGame() {
     }, 5000);
     
     //add the event listener for pressing space and having the bird jump
-    await delay(100);
-    window.addEventListener('click', function() {birdJump()});
+    setTimeout(() => {
+        window.addEventListener('click', function jump() {birdJump()});
+        //jump once to make gravity activate
+        birdJump();
+    }, 100);
 
-    //render the bird
+    //render the bird and start it not at the bottom
     const bird:any = document.getElementById('bird');
+    bird.style.bottom = '45%';
+    bird.style.left = '1%';
     bird.style.opacity = 1.0;
+
+    //render all obsts
+    document.querySelectorAll('.obst').forEach((obst:any) => {
+        obst.style.left = '100%';
+    });
+
+    //begin checking for losses
+    setTimeout(() => {
+        lossChecker();
+    }, 500);
 };
 
 class FlappyBird extends Component {
@@ -105,9 +182,19 @@ class FlappyBird extends Component {
     render() {
         return (
             <React.Fragment>
-                <h1>
-                    NewRinaldi brings to you: Flappy Bird
-                </h1>
+
+                <div id="gameOverScreen">
+                    <button type="button" onClick={function() {
+                        document.body.style.opacity = '0.0';
+                        setTimeout(() => {
+                            window.location.reload();
+                        }, 1000);
+                    }}
+                     style={{visibility: 'hidden', transitionProperty: 'opacity', transitionDuration: '1s', opacity: '0.0'}} id="restartButton">
+                        <h1 id="gameOverText" style={{color: 'red', marginTop: '30%'}}>
+                        </h1>
+                    </button>
+                </div>
                 <p>
                     THIS IS NOT DONE YET, RELEASING SOON! <br/>(Feel free to test the game tho)
                 </p>
@@ -120,11 +207,15 @@ class FlappyBird extends Component {
                     thisButton.onClick = null;
                 }}>
                     <p>
-                        {isMobile() == true ? 'Tap ' : 'Click '} here to begin the game
+                        Click here to begin
                     </p>
                 </button>
 
-                {isMobile() == true ? (<p>This game is approx. very much easier if u make ur phone landscape BTW</p>) : (<></>)}
+                <div className="contentSection"></div>
+
+                <h2>
+                    Yes, the system to check if you hit an obstacle is buggy <br/>No, I don't care to fix it
+                </h2>
 
                 <div id="mainGameBoard">
                     <div id="bird"></div>
