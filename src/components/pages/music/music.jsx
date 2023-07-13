@@ -7,7 +7,7 @@ import { playPauseClicked, muteUnmuteClicked, stopMusic } from './musicPlayerFun
 class Music extends Component {
 
     state = {
-        trackList: ['startYourEngines', 'mrCoffee', 'bitHavinAFit', 'alexComp1Remix','aroundTwitching', 'theIronDuke', 'christmasPresent', 'greenestGrass',
+        trackList: ['startYourEngines', 'literallyNoV2', 'mrCoffee', 'bitHavinAFit', 'alexComp1Remix','aroundTwitching', 'theIronDuke', 'christmasPresent', 'greenestGrass',
          'iAmGoingToTakeTheRights', 'twitchingAround','marchOfRansome', 'onwardsAndUpwards', 'R4RTheme', 'skidaddle',
          'summerSun', 'takeoff', 'theLastStand', 'tunsinBopperV2', 'twitchingAroundV2', 'spoons2'],
 
@@ -17,6 +17,12 @@ class Music extends Component {
                 cover: 'https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FalbumCovers%2FStart%20Your%20Engines%20Cover.jpg?alt=media&token=159b4b11-98cb-429d-8353-0274dab58136',
                 time: 0,
                 src: 'Music/Start Your Engines.mp3',
+            },
+            literallyNoV2: {
+                title: "Literally No V2",
+                cover: "https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FalbumCovers%2FLiterally%20No%20V2%20Cover.jpg?alt=media&token=6579a3d4-90e7-4a46-9d0f-44377f01c984",
+                time: 0,
+                src: 'Music/Literally No V2 FLAC.flac'
             },
             mrCoffee: {
                 title: "Mr. Coffee",
@@ -76,7 +82,7 @@ class Music extends Component {
                 title: 'March Of Leader Ransome',
                 cover: 'https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FalbumCovers%2FMarch%20of%20leader%20ransome.jpg?alt=media&token=775a222d-131d-4152-aed5-766c1b4de3c1',
                 time: 0,
-                src: 'Music/MrachOfLeaderRansomeV2.mp3',
+                src: 'Music/MarchOfLeaderRansomeV2.mp3',
             },
             onwardsAndUpwards: {
                 title: 'Onwards and Upwards',
