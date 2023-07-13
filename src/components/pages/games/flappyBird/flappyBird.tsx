@@ -108,7 +108,7 @@ async function lossChecker() {
             if (obstY > (birdY - 6) && obstY < (birdY - 3)) {
 
                 //if the x-coords match up, check the x-coords match up
-                if (obstX > (birdX - 1) && obstX < (birdX + 3)) {
+                if (obstX > (birdX - 1) && obstX < (birdX + 1)) {
 
                     //collision has occured
                     gameOver();
@@ -118,7 +118,7 @@ async function lossChecker() {
         });
     
         //if the player has not lost, then repeat the check after a delay so long as the game is still ongoing
-        await delay(20);
+        await delay(10);
         lossChecker();
     };
 
@@ -195,9 +195,16 @@ class FlappyBird extends Component {
                         </h1>
                     </button>
                 </div>
-                <p>
-                    THIS IS NOT DONE YET, RELEASING SOON! <br/>(Feel free to test the game tho)
-                </p>
+
+                <h1>
+                    NewRinaldi brings to you: Flappy Bird
+                </h1>
+
+                <div className="contentSection"></div>
+
+                <h2>
+                    Yes, the system to check if you hit an obstacle is buggy <br/>No, I don't care to fix it
+                </h2>
 
                 <button id="startButton" type="button" onClick={function() {
                     startGame();
@@ -212,10 +219,6 @@ class FlappyBird extends Component {
                 </button>
 
                 <div className="contentSection"></div>
-
-                <h2>
-                    Yes, the system to check if you hit an obstacle is buggy <br/>No, I don't care to fix it
-                </h2>
 
                 <div id="mainGameBoard">
                     <div id="bird"></div>

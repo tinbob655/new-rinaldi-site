@@ -13,6 +13,7 @@ import wackAMoleCover from './gameCovers/wackAMoleCover.png';
 import colourMatchCover from './gameCovers/colourMatchCover.png';
 import ticTacToeCover from './gameCovers/ticTacToeCover.png';
 import battleshipsCover from './gameCovers/battleshipsCover.png';
+import flappyBirdCover from './gameCovers/flappyBirdCover.png';
 
 export function changeGame(game) {
     //make sure the current games page is not being requested
@@ -27,7 +28,7 @@ export function changeGame(game) {
 
 const gameBackendTitles = ['wackAMole', 'battleships', 'colourMatch', 'ticTacToe', 'flappyBird', 'tRexRun'];
 const gameTitles = ['Wack a Mole', 'Battleships', 'Colour Match', 'Tic Tac Toe', 'Flappy Bird', 'T-Rex Run'];
-const gameImages = [wackAMoleCover, battleshipsCover, colourMatchCover, ticTacToeCover, null, null];
+const gameImages = [wackAMoleCover, battleshipsCover, colourMatchCover, ticTacToeCover, flappyBirdCover, null];
 
 class Games extends Component {
 
@@ -97,7 +98,7 @@ class Games extends Component {
                             {gameTitles[cellNo]}
                         </h3>
                         <img src={gameImages[cellNo]} className="centered"
-                         style={{height: 'auto', maxHeight: '200px'}} alt="Internet Is Required To Load Images"/>
+                         style={{height: 'auto', maxHeight: '200px'}} alt="Coming soon!!!"/>
                     </button>
                 </td>
             );
