@@ -14,6 +14,7 @@ import colourMatchCover from './gameCovers/colourMatchCover.png';
 import ticTacToeCover from './gameCovers/ticTacToeCover.png';
 import battleshipsCover from './gameCovers/battleshipsCover.png';
 import flappyBirdCover from './gameCovers/flappyBirdCover.png';
+import tRexRunCover from './gameCovers/tRexRunCover.png';
 
 export function changeGame(game) {
     //make sure the current games page is not being requested
@@ -28,7 +29,7 @@ export function changeGame(game) {
 
 const gameBackendTitles = ['wackAMole', 'battleships', 'colourMatch', 'ticTacToe', 'flappyBird', 'tRexRun'];
 const gameTitles = ['Wack a Mole', 'Battleships', 'Colour Match', 'Tic Tac Toe', 'Flappy Bird', 'T-Rex Run'];
-const gameImages = [wackAMoleCover, battleshipsCover, colourMatchCover, ticTacToeCover, flappyBirdCover, null];
+const gameImages = [wackAMoleCover, battleshipsCover, colourMatchCover, ticTacToeCover, flappyBirdCover, tRexRunCover];
 
 class Games extends Component {
 
