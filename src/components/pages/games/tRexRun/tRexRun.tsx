@@ -145,7 +145,9 @@ function gameOver() {
     document.getElementById('gameOverScreen')?.classList.add('shown');
 
     //save the score in case of a play again
-    sessionStorage.setItem('tRexHighScore', String(score));
+    if (score > Number(sessionStorage.getItem('tRexHighScore'))) {
+        sessionStorage.setItem('tRexHighScore', String(score));
+    };
 };
 
 function startGame() {
