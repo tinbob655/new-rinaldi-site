@@ -30,7 +30,7 @@ function repetedlyChangeBackgroundImage() {
         changingImage.src = allBackgroundImages[backgroundImage % allBackgroundImages.length];
         backgroundImage++;
 
-        await delay(500);
+        await delay(750);
 
         //spin the image back in
         changingImage.style.transform = 'rotate(0deg) scale(1, 1)';
