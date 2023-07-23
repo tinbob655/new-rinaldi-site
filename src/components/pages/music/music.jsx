@@ -2,13 +2,14 @@ import React, {Component} from 'react';
 //import functions
 import {isMobile} from '../../../index.js';
 import { changePage } from '../../../index.js';
-import { playPauseClicked, muteUnmuteClicked, stopMusic } from './musicPlayerFunctions.js';
+import { playPauseClicked, muteUnmuteClicked, stopMusic } from './musicPlayerFunctions.js';;
+
 
 class Music extends Component {
 
     state = {
-        trackList: ['startYourEngines', 'literallyNoV2', 'mrCoffee', 'bitHavinAFit', 'alexComp1Remix','aroundTwitching', 'theIronDuke', 'christmasPresent', 'greenestGrass',
-         'iAmGoingToTakeTheRights', 'twitchingAround','marchOfRansome', 'onwardsAndUpwards', 'R4RTheme', 'skidaddle',
+        trackList: ['startYourEngines', 'literallyNoV2','iDontTwitchBitch', 'soviet4', 'mrCoffee', 'bitHavinAFit', 'alexComp1Remix','aroundTwitching', 'theIronDuke',
+         'christmasPresent', 'greenestGrass', 'iAmGoingToTakeTheRights', 'twitchingAround','marchOfRansome', 'onwardsAndUpwards', 'R4RTheme', 'skidaddle',
          'summerSun', 'takeoff', 'theLastStand', 'tunsinBopperV2', 'twitchingAroundV2', 'spoons2'],
 
         tracks: {
@@ -23,6 +24,18 @@ class Music extends Component {
                 cover: "https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FalbumCovers%2FLiterally%20No%20V2%20Cover.jpg?alt=media&token=6579a3d4-90e7-4a46-9d0f-44377f01c984",
                 time: 0,
                 src: 'Music/Literally No V2 FLAC.flac'
+            },
+            iDontTwitchBitch: {
+                title: "I Don't Twitch, Bitch",
+                cover: "https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FalbumCovers%2FiDontTwitchBitchCover.jpg?alt=media&token=25f05772-54ee-4c33-a1b7-8449edca09b5",
+                time: 0,
+                src: "Music/I Don't Twitch, Bitch FLAC.flac",
+            },
+            soviet4: {
+                title: 'March Of The Soviet Machine V4',
+                cover: "https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FalbumCovers%2Fsoviet4Cover.jpg?alt=media&token=761fe174-2f5c-45d5-bb2e-0ea0c8ca0f16",
+                time: 0,
+                src: "Music/March Of The Soviet Machine V4 FLAC.flac",
             },
             mrCoffee: {
                 title: "Mr. Coffee",
