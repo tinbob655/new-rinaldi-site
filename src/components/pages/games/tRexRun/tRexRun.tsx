@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './tRexRunStyles.scss';
+import {getStorage, ref, getDownloadURL} from 'firebase/storage';
 
 var obstNo:number = 0;
 var difficultyMod:number = 0;
@@ -181,6 +182,15 @@ function startGame() {
         increaseScore();
         scoreCounter.style.transform = 'scale(1, 1)';
     }, 501);
+
+    //audio
+    const audio:any = document.getElementById('audioLoop');
+    const storage = getStorage();
+    getDownloadURL(ref(storage, 'Music/Literally No V2 FLAC.flac'))
+        .then((url) => {
+            audio.src = url;
+            audio.play();
+        });
 };
 
 class TRexRun extends Component {

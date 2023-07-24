@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './flappyBirdStyles.scss'
+import {getStorage, ref, getDownloadURL} from 'firebase/storage';
 
 var difficultyMultiplyer:number = 1;
 var gameStarted:boolean = false;
@@ -175,6 +176,15 @@ async function startGame() {
     setTimeout(() => {
         lossChecker();
     }, 500);
+
+    //audio
+    const audio:any = document.getElementById('audioLoop');
+    const storage = getStorage();
+    getDownloadURL(ref(storage, "Music/I Don't Twitch, Bitch FLAC.flac"))
+        .then((url) => {
+            audio.src = url;
+            audio.play();
+        });
 };
 
 class FlappyBird extends Component {
