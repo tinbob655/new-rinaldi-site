@@ -202,7 +202,8 @@ class TRexRun extends Component {
                     <button type="button" onClick={function() {window.location.reload()}}>
                         <h1 style={{color: 'red', marginTop: '20vh'}}>
                             Thank god u lost, that has made me rlllly happy <br/><br/>
-                            Click here to try again (you'll prob get worse tho tbh)
+                            Click here to try again (you'll prob get worse tho tbh) <br/><br/>
+                            (Just give up Evlyn its not happening)
                         </h1>
                         <p id="gameOverScoreCounter" style={{color: 'red'}}>
                         </p>
