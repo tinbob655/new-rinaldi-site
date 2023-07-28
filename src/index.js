@@ -27,12 +27,17 @@ export function isMobile () {
     return check;
   };
 
-  if (mobileCheck() == true || navigator.userAgentData.mobile == true) {
-      return (true);
+  try {
+      if (mobileCheck() == true || navigator.userAgentData.mobile == true) {
+        return (true);
+    }
+    else {
+        return (false);
+    };
   }
-  else {
-      return (false);
-  };
+  catch {
+    return window.orientation > 1;
+  }
 };
 
 //if the user is on mobile, set the scss enlargments
