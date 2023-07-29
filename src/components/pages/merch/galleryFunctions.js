@@ -10,7 +10,8 @@ const merchImages = ['https://firebasestorage.googleapis.com/v0/b/newrinaldi-82c
 'https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2Fmerch%2Fblue%20t-shirt.webp?alt=media&token=fefb2ca9-4251-4172-856f-467e64ada785',
 'https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2Fmerch%2Ftote%20bag.webp?alt=media&token=bb99e391-5366-4baa-948b-6be15d03c0e2',
 'https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2Fmerch%2Fwhite%20long%20sleeve%20t-shirt.webp?alt=media&token=7a91883a-87b2-45c2-aaeb-c35f811d33dd',
-'https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2Fmerch%2Fwhite%20t-shirt.webp?alt=media&token=bd38bcce-4fc5-4a23-85d0-13545a0c45c3'];
+'https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2Fmerch%2Fwhite%20t-shirt.webp?alt=media&token=bd38bcce-4fc5-4a23-85d0-13545a0c45c3',
+'https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2Fmerch%2FdicipleDeanTShirt.png?alt=media&token=18e89d3d-d3ba-4bed-aaa9-5868f6fc3128'];
 
 var galleryNum = 1;
 
