@@ -188,6 +188,9 @@ td.headerCell {
 img {
   width: auto;
   display: block;
+  color: white;
+  font-family: monospace;
+  font-weight: 100;
 
   &.rounded {
     border-radius: 50%;
