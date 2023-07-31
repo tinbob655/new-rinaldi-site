@@ -7,6 +7,7 @@ import ColourMatch from './colourMatch/colourMatch.tsx';
 import TicTacToe from './ticTacToe/ticTacToe.tsx';
 import FlappyBird from './flappyBird/flappyBird.tsx';
 import TRexRun from './tRexRun/tRexRun.tsx';
+import Pong from './pong/pong.tsx';
 import BackToGamesPageButton from './backToGamesPageButton.jsx';
 //import game cover images
 import wackAMoleCover from './gameCovers/wackAMoleCover.png';
@@ -27,9 +28,9 @@ export function changeGame(game) {
     };
 };
 
-const gameBackendTitles = ['wackAMole', 'battleships', 'colourMatch', 'ticTacToe', 'flappyBird', 'tRexRun'];
-const gameTitles = ['Wack a Mole', 'Battleships', 'Colour Match', 'Tic Tac Toe', 'Flappy Bird', 'T-Rex Run'];
-const gameImages = [wackAMoleCover, battleshipsCover, colourMatchCover, ticTacToeCover, flappyBirdCover, tRexRunCover];
+const gameBackendTitles = ['wackAMole', 'battleships', 'colourMatch', 'ticTacToe', 'flappyBird', 'tRexRun', 'pong'];
+const gameTitles = ['Wack a Mole', 'Battleships', 'Colour Match', 'Tic Tac Toe', 'Flappy Bird', 'T-Rex Run', 'Pong'];
+const gameImages = [wackAMoleCover, battleshipsCover, colourMatchCover, ticTacToeCover, flappyBirdCover, tRexRunCover, null];
 
 class Games extends Component {
 
@@ -83,6 +84,7 @@ class Games extends Component {
             ticTacToe: <TicTacToe/>,
             flappyBird: <FlappyBird/>,
             tRexRun: <TRexRun/>,
+            pong: <Pong/>,
         };
 
         return allGames[sessionStorage.getItem('currentGame')];
