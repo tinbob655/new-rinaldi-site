@@ -2,17 +2,42 @@ import React, {Component} from 'react';
 //import functions
 import {isMobile} from '../../../index.js';
 import { changePage } from '../../../index.js';
-import { playPauseClicked, muteUnmuteClicked, stopMusic } from './musicPlayerFunctions.js';;
+import { playPauseClicked, muteUnmuteClicked, stopMusic } from './musicPlayerFunctions.js';
 
 
 class Music extends Component {
 
     state = {
-        trackList: ['startYourEngines', 'literallyNoV2','iDontTwitchBitch', 'soviet4', 'mrCoffee', 'bitHavinAFit', 'alexComp1Remix','aroundTwitching', 'theIronDuke',
+        trackList: ['theMutinousHelmsman', 'theCellistV2', 'bitHavinAFitV2', 'hometimeV2', 'startYourEngines', 'literallyNoV2','iDontTwitchBitch',
+         'soviet4', 'mrCoffee', 'bitHavinAFit', 'alexComp1Remix','aroundTwitching', 'theIronDuke',
          'christmasPresent', 'greenestGrass', 'iAmGoingToTakeTheRights', 'twitchingAround','marchOfRansome', 'onwardsAndUpwards', 'R4RTheme', 'skidaddle',
          'summerSun', 'takeoff', 'theLastStand', 'tunsinBopperV2', 'twitchingAroundV2', 'spoons2'],
 
         tracks: {
+            theMutinousHelmsman: {
+                title: "The Mutinous Helmsman",
+                cover: 'https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FalbumCovers%2FtheMutinousHelmsmanCover.jpg?alt=media&token=614217d2-f774-49bc-ab9d-b08430dea677',
+                time: 0,
+                src: 'Music/The Mutinous Helmsman FLAC.flac',
+            },
+            theCellistV2: {
+                title: "The Cellist V2",
+                cover: 'https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FalbumCovers%2FtheCellistV2Cover.jpg?alt=media&token=08d70261-0c2b-46a4-b6c6-282a26a79e85',
+                time: 0,
+                src: 'Music/The Cellist V2 FLAC.flac',
+            },
+            bitHavinAFitV2: {
+                title: "8-bit Havin' A Fit V2",
+                cover: 'https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FalbumCovers%2FbitHavinAFitV2Cover.jpg?alt=media&token=1adb4e61-4e9c-4b37-b649-d77fe1b978f0',
+                time: 0,
+                src: 'Music/8 Bit Havin A Fit V2 FLAC.flac',
+            },
+            hometimeV2: {
+                title: "Hometime V2",
+                cover: 'https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FalbumCovers%2FhometimeV2Cover.jpg?alt=media&token=3d59a92e-7c74-4ae2-8af2-86dbfe3470ee',
+                time: 0,
+                src: 'Music/Hometime V2 FLAC.flac',
+            },
             startYourEngines: {
                 title: "Start Your Engines",
                 cover: 'https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FalbumCovers%2FStart%20Your%20Engines%20Cover.jpg?alt=media&token=159b4b11-98cb-429d-8353-0274dab58136',
