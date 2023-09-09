@@ -49,6 +49,9 @@ class Games extends Component {
                     <h2>
                         That's right, we got games. Click any game to get playing
                     </h2>
+                    <p>
+                        Some games might not work on some browsers, we recommend using chromium browsers or opera for the best games experience
+                    </p>
                     <table>
                         <thead>
                             {this.getAllGameLinks()}
