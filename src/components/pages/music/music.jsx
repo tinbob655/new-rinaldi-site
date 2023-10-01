@@ -8,8 +8,8 @@ import { playPauseClicked, muteUnmuteClicked, stopMusic } from './musicPlayerFun
 class Music extends Component {
 
     state = {
-        trackList: ['theMutinousHelmsman', 'theCellistV2', 'bitHavinAFitV2', 'hometimeV2', 'startYourEngines', 'literallyNoV2','iDontTwitchBitch',
-         'soviet4', 'mrCoffee', 'bitHavinAFit', 'alexComp1Remix','aroundTwitching', 'theIronDuke',
+        trackList: ['theMutinousHelmsman', 'takeoffV2', 'firecracker', 'aNewEra', 'untoldHorizons', 'theCellistV2', 'bitHavinAFitV2', 'hometimeV2', 'startYourEngines',
+         'literallyNoV2','iDontTwitchBitch', 'soviet4', 'mrCoffee', 'bitHavinAFit', 'alexComp1Remix','aroundTwitching', 'theIronDuke',
          'christmasPresent', 'greenestGrass', 'iAmGoingToTakeTheRights', 'twitchingAround','marchOfRansome', 'onwardsAndUpwards', 'R4RTheme', 'skidaddle',
          'summerSun', 'takeoff', 'theLastStand', 'tunsinBopperV2', 'twitchingAroundV2', 'spoons2'],
 
@@ -19,6 +19,30 @@ class Music extends Component {
                 cover: 'https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FalbumCovers%2FtheMutinousHelmsmanCover.jpg?alt=media&token=614217d2-f774-49bc-ab9d-b08430dea677',
                 time: 0,
                 src: 'Music/The Mutinous Helmsman FLAC.flac',
+            },
+            takeoffV2: {
+                title: "Takeoff V2",
+                cover: 'https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FalbumCovers%2FtakeoffV2Cover.jpg?alt=media&token=74905bbb-d471-47bb-979a-6471f1b213b5',
+                time: 0,
+                src: 'Music/Takeoff V2 FLAC.flac',
+            },
+            firecracker: {
+                title: "Firecracker",
+                cover: 'https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FalbumCovers%2FfirecrackerCover.png?alt=media&token=16a4ddd7-c39a-4651-be41-e7024d6a0ac2',
+                time: 0,
+                src: 'Music/Firecracker FLAC.flac',
+            },
+            aNewEra: {
+                title: "A New Era",
+                cover: 'https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FalbumCovers%2FaNewEraCover.jpg?alt=media&token=d07c37b2-803f-4064-8c76-f9b8b1945b4d',
+                time: 0,
+                src: 'Music/A New Era FLAC.flac',
+            },
+            untoldHorizons: {
+                title: "Untold Horizons",
+                cover: 'https://firebasestorage.googleapis.com/v0/b/newrinaldi-82cfd.appspot.com/o/images%2FalbumCovers%2FuntoldHorizonsCover.png?alt=media&token=febb0170-46c4-4d83-8494-08b2afca310b',
+                time: 0,
+                src: 'Music/Untold Horizons FLAC.flac',
             },
             theCellistV2: {
                 title: "The Cellist V2",
